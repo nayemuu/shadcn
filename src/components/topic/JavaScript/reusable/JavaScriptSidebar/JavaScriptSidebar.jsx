@@ -46,13 +46,15 @@ const items = [
   },
 ];
 
-const JavaScriptSidebar = () => {
+const JavaScriptSidebar = ({ sidebarStatus }) => {
   return (
     <SidebarProvider
       style={{
         "--sidebar-width": "20rem",
         "--sidebar-width-mobile": "20rem",
       }}
+      defaultOpen={sidebarStatus}
+      open={sidebarStatus}
     >
       <Sidebar>
         <SidebarContent>
