@@ -1,3 +1,4 @@
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import "./Navbar.css";
 import SearchBar from "./SearchBar/SearchBar";
 
@@ -9,7 +10,8 @@ const Navbar = () => {
         <div>Home</div>
       </div>
 
-      <div className="w-full max-w-[400px] flex-grow">
+      <div className="w-full max-w-[400px] flex-grow flex items-center gap-5">
+        <SidebarTrigger />
         <SearchBar />
       </div>
     </div>
