@@ -23,7 +23,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <SidebarProvider
+          style={{
+            "--sidebar-width": "20rem",
+            "--sidebar-width-mobile": "20rem",
+          }}
+        >
+          <main className="w-full">{children}</main>
+        </SidebarProvider>
       </body>
     </html>
   );
